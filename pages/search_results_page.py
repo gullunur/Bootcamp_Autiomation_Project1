@@ -1,4 +1,3 @@
-import logging
 from selenium.webdriver import ActionChains
 from selenium.webdriver.common.by import By
 from pages.base_page import BasePage
@@ -16,7 +15,6 @@ class SearchResultPage(BasePage):
 
     def __init__(self, driver):
         super().__init__(driver) #Initialize homepage using BasePage.
-        self.logger = logging
 
     def check_searched_page(self, search_text):
         products = self.find_element(self.SEARCH_RESULT)
